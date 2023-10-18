@@ -16,3 +16,6 @@ yarn.lock
 
 #Build
 build/
+
+#Vercel config
+vercel.json
