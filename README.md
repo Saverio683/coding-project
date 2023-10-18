@@ -4,7 +4,7 @@ This project consists of creating a simple fullstack project, where the React fr
 The assignment is to build a UI that allows users to type in a country to receive information about it, via the node server and the [REST Countries](https://restcountries.com/) api.
 
 ## Project overview
-![project overview](https://i.imgur.com/4cXhwpE.png)
+![project overview](https://i.imgur.com/djSSsRc.png)
 - I used **TypeScript** throughout the project, this to avoid/prevent typeError which, on React in particular, causes quite a few development delays; another good reason why I chose ts is to have a more simplified refactoring.
 - I decided to create an **additional endpoint**, not asked in the delivery, that returns an array of all the common names of the world's nations, again via REST Countries. 
 I did this to improve the UX by being able to show hints to the user as they type in a country.

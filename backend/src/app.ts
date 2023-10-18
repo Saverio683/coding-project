@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-import countryRouter from './routes/countries/countries.route'
+import countryRouter from './routes/countries/countries.route' 
 
 const app: Express = express()
 const server = http.createServer(app)
