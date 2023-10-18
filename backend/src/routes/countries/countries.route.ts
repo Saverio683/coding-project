@@ -11,10 +11,14 @@ countryRouter.get('/find/:name', async (req: Request, res: Response) => {
         const response = await axios.get(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
         const data = response.data[0]
 
+
         const languages: string[] = []
         for(const lang in data.languages)
             languages.push(lang)
-        const currencies = data.currencies[Object.keys(data.currencies)[0]]
+
+        let currencies
+        if(data.currencies)
+            currencies = data.currencies[Object.keys(data.currencies)[0]]
 
         const result: Country = {
             name: data.name.common,

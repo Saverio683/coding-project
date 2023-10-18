@@ -20,13 +20,14 @@ const persistedReducer = persistReducer(persistConfig, combineReducers({
 
 export const store = configureStore({
     reducer: persistedReducer,
-    middleware: getDefaultMiddleware =>
-        getDefaultMiddleware({
+    middleware: getDefaultMiddleware => {
+        const middleware = getDefaultMiddleware({
             thunk: true,
             serializableCheck: false
         })
             .prepend()
-            .concat(logger),
+        return process.env.NODE_ENV !== 'production' ? middleware.concat(logger) : middleware
+    },
     devTools: process.env.NODE_ENV !== 'production'
 })
 
