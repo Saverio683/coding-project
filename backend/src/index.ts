@@ -16,6 +16,8 @@ app.use(cors(corsOptions))
 app.use(express.json({limit: '500mb'}))
 
 app.use('/countries', countryRouter)
-app.listen(443)
+app.listen(4000, () => {
+    console.log('Server running')
+})
 
 export default app
