@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals'
 import request from 'supertest'
-import app from './app'
+import app from '.'
 
 describe('Server', () => {
     it('should start and listen on the specified port', async () => {
