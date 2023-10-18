@@ -29,7 +29,7 @@ const App = () => {
 
     return (
         <div className='app'>
-            {/* logo and dynamic background are always shown */}
+            {/*logo and dynamic background are always shown*/}
             <Logo />
         {
             loading ?
