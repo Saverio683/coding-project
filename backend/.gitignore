@@ -8,8 +8,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Yarn files
+# Lock files
 yarn.lock
+package-lock.json
 
 #Enviroment file(s)
 .env

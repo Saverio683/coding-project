@@ -8,8 +8,9 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 
-# Yarn files
+# Lock files
 yarn.lock
+package-lock.json
 
 #Enviroment file(s)
 .env

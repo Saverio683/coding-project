@@ -25,7 +25,7 @@
     "ts-jest": "^29.1.1"
   },
   "scripts": {
-    "start": "npx nodemon api/index.ts",
+    "start": "npx nodemon src/app.ts",
     "test": "npx jest --runInBand --forceExit"
   },
   "jest": {
