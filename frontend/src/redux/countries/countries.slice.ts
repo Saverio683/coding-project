@@ -21,7 +21,7 @@ const initialState: {
     loading: false
 }
 
-const BASE_URL = process.env.REACT_APP_BASE_URL
+const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:4000'
 
 export const getAllCountriesName = createAsyncThunk(
     'countries/getAll',
