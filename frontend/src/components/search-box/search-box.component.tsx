@@ -1,5 +1,4 @@
-import { useState, FormEvent } from 'react'
-import { useKeyPress } from "@uidotdev/usehooks"
+import { useState, FormEvent, useEffect } from 'react'
 
 import { fetchCountry } from '../../redux/countries/countries.slice'
 import { useAppSelector, useAppDispatch } from '../../redux/hooks'
@@ -12,21 +11,20 @@ const SearchBox = () => {
     const [index, setIndex] = useState<number>(0)
     const dispatch = useAppDispatch()
 
-    const onKeyPressUp = () => {
-        setIndex(prevState => {
-            if(prevState > 0)
-                return prevState - 1
-            return prevState
-        })
-    }
-
-    const onKeyPressDown = () => {
-        setIndex(prevState => prevState+1)
-    }
-
     //to detect when the down or up arrow key is pressed
-    useKeyPress('ArrowUp', onKeyPressUp)
-    useKeyPress('ArrowDown', onKeyPressDown)
+    useEffect(() => {
+        const handleKeyPress = (e: KeyboardEvent) => {
+            if (e.key === 'ArrowUp') {
+                setIndex(prevIndex => Math.max(prevIndex - 1, 0))
+            } else if (e.key === 'ArrowDown') {
+                setIndex(prevIndex => Math.min(prevIndex + 1, serchSuggeriments.length - 1))
+            }
+        }
+        document.addEventListener('keydown', handleKeyPress)
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress)
+        }
+    }, [serchSuggeriments])
 
     const handleInputSearch = (e: any) => {
         const { value } = e.target

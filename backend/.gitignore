@@ -13,3 +13,6 @@ yarn.lock
 
 #Enviroment file(s)
 .env
+
+#Build
+build/
