@@ -15,9 +15,7 @@ const corsOptions: cors.CorsOptions = {
 app.use(cors(corsOptions))
 app.use(express.json({limit: '500mb'}))
 
-const PORT: number = parseInt(process.env.PORT || '4000', 10)
-
 app.use('/countries', countryRouter)
-app.listen()
+app.listen(443)
 
 export default app
