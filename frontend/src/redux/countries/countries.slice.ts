@@ -27,8 +27,12 @@ console.log(BASE_URL)
 export const getAllCountriesName = createAsyncThunk(
     'countries/getAll',
     async () => {
-        const response = await axios.get(`${BASE_URL}/countries/all`)
-        return (response.data) as any
+        try {
+            const response = await axios.get(`${BASE_URL}/countries/all`)
+            return (response.data) as any
+        } catch(err: any) {
+            return { response: err.response }
+        }
     }
 )
 
