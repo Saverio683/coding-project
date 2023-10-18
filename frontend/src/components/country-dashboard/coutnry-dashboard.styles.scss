@@ -1,0 +1,50 @@
+.country-dashboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff7a;
+    border-radius: 34px;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    row-gap: 30px;
+    padding: 40px;
+
+    .name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(20px, 3vw, 3vw);
+        text-align: center; 
+    }
+
+    img {
+        margin: 0 auto;
+        min-width: 220px;
+        max-height: 50vh;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        span {
+            font-size: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 60%;
+        row-gap: 20px;
+        padding: 30px;
+
+        .row {
+            row-gap: 10px;
+
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+}

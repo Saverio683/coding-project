@@ -1,0 +1,16 @@
+.go-back {
+    position: fixed;
+    right: 3vh;
+    bottom: 3vh;
+    background-color: #fff;
+    padding: clamp(15px, 1.7%, 3%);
+    border-radius: 50%;
+    max-width: 80px;
+    cursor: pointer;
+
+    img {
+        min-width: 50px;
+        width: 3.5vw;
+        height: auto;
+    }
+}

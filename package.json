@@ -1,0 +1,14 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Saverio683",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "backend": "cd backend/ && yarn start",
+    "frontend": "cd frontend/ && yarn start",
+    "start": "yarn backend & yarn frontend",
+    "test": "cd backend/ && yarn test"
+  }
+}
